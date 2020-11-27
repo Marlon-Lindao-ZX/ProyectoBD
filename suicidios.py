@@ -11,19 +11,20 @@ mr = MapReduce.MapReduce()
 # Do not modify above this line
 
 def mapper(record):
+    print(record)
     # key: document identifier
     # value: document contents
     key = record[0]
     value = record[1]
-    words = value.split()
+    #words = value.split()
 
     # ---- TU CODIGO AQUI ----
     # para cada palabra w en la lista 'words' emite  (w,1)
     # usa mr.emit_intermediate
     # ------------------------
-    for w in words:
-        if re.match("[A-Za-z]+",w) is not None:
-            mr.emit_intermediate(w.lower(),1)
+    print('clave: ' + key)
+    print('valor:' + value)
+    mr.emit_intermediate(1,1)
 
 def reducer(key, list_of_values):
     # key: word
@@ -39,10 +40,32 @@ def reducer(key, list_of_values):
 if __name__ == '__main__':
   #inputdata = open(sys.argv[1])
   #mr.execute(inputdata, mapper, reducer)
+  lista = []
   client = MongoClient("mongodb+srv://sDsVuNPCSUTtObcH:sDsVuNPCSUTtObcH@cluster0.rjqka.mongodb.net/test?authSource=admin&replicaSet=atlas-zmesu9-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true")
   db = client.ProyectoBD
   #serverStatusResult = db.command("serverStatus")
-  resultado = db.Suicidios.find()
+  resultado = db.Suicidios.find({'year':{'$gt':'1999'}})
+  for object in resultado:
+        #print(object.values())
+        listaSTR = "["
+        contador = True
+        for elemento in list(object.values()):
+            if contador:
+               listaSTR += "\""
+               contador = False
+            else:
+                listaSTR += ",\""
+            listaSTR += str(elemento) + "\""
+        listaSTR += "]\n"
+        lista.append(listaSTR)
+      
+  #print(lista)
+   
+  mr.execute(lista, mapper, reducer)
+  '''
+  resultado = db.Suicidios.find({'country':'Ecuador'})
   for object in resultado:
     pprint.pprint(object)
+    '''
+    
   
