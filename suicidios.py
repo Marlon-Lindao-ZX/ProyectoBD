@@ -11,20 +11,19 @@ mr = MapReduce.MapReduce()
 # Do not modify above this line
 
 def mapper(record):
-    print(record)
     # key: document identifier
     # value: document contents
-    key = record[0]
-    value = record[1]
+    key = (record[2],record[4])
+    value = record[5]
     #words = value.split()
 
     # ---- TU CODIGO AQUI ----
     # para cada palabra w en la lista 'words' emite  (w,1)
     # usa mr.emit_intermediate
     # ------------------------
-    print('clave: ' + key)
-    print('valor:' + value)
-    mr.emit_intermediate(1,1)
+    #print('clave: ' + key)
+    #print('valor:' + value)
+    mr.emit_intermediate(key,value)
 
 def reducer(key, list_of_values):
     # key: word
@@ -33,7 +32,10 @@ def reducer(key, list_of_values):
     # emite (key, longitud list_of_values)
     # usa mr.emit
     # ------------------------
-    mr.emit((key,len(list_of_values)))
+    sum = 0
+    for value in list_of_values:
+        sum += int(value)
+    mr.emit((key,sum))
 
 # Do not modify below this line
 # =============================
@@ -43,7 +45,15 @@ if __name__ == '__main__':
   lista = []
   client = MongoClient("mongodb+srv://sDsVuNPCSUTtObcH:sDsVuNPCSUTtObcH@cluster0.rjqka.mongodb.net/test?authSource=admin&replicaSet=atlas-zmesu9-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true")
   db = client.ProyectoBD
-  #serverStatusResult = db.command("serverStatus")
+  #serverStatusResult = db.command("serverStatus")}
+  '''
+  a = db.Suicidios.count_documents({'sex':'male','year':'2016'})
+  b = db.Suicidios.count_documents({'sex':'female','year':'2016'})
+  c = db.Suicidios.count_documents({'year':'2016'})
+  print(a)
+  print(b)
+  print(c)
+  '''
   resultado = db.Suicidios.find({'year':{'$gt':'1999'}})
   for object in resultado:
         #print(object.values())

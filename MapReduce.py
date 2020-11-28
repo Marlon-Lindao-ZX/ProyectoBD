@@ -13,7 +13,6 @@ class MapReduce:
         self.result.append(value) 
 
     def execute(self, data, mapper, reducer):
-        print(data)
         for line in data:
             record = json.loads(line)
             mapper(record)
