@@ -15,7 +15,7 @@ if __name__ == '__main__':
     client = MongoClient("mongodb+srv://sDsVuNPCSUTtObcH:sDsVuNPCSUTtObcH@cluster0.rjqka.mongodb.net/test?authSource=admin&replicaSet=atlas-zmesu9-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true")
     db = client.ProyectoBD
     #serverStatusResult = db.command("serverStatus")}
-    db.Suicidios2.drop()
+    db.Suicidios.drop()
     keys = []
     objetos = []
     with open('master.csv') as csv_file:
@@ -41,11 +41,47 @@ if __name__ == '__main__':
                 line_count += 1
     print(f'Processed {line_count} lines.')
 
-    db.Suicidios2.insert_many(objetos)
+    db.Suicidios.insert_many(objetos)
     
-    resultado = db.Suicidios2.count_documents({})
+    resultado = db.Suicidios.count_documents({})
 
     print(f'Cantidad de Objetos en la Coleccion: {resultado} objetos.')
+
+    print('Consulta #1')
+    
+    resultado = db.Suicidios.count_documents({'year':{'$gt':'1999'}, 'year':{'$lt':'2005'}})
+    print(f'Numero de datos encontrados: {resultado} objetos.')
+
+    resultado = db.Suicidios.find({'year':{'$gt':'1999'}, 'year':{'$lt':'2005'}},)
+    i = 1
+    for object in resultado:
+        print('#' + str(i) + ':')
+        pprint.pprint(object)
+        i += 1
+
+    print('Consulta #2')
+
+    resultado = db.Suicidios.count_documents({'generation':'Generation X','country':'Ecuador'})
+    print(f'Numero de datos encontrados: {resultado} objetos.')
+
+    resultado = db.Suicidios.find({'generation':'Generation X','country':'Ecuador'})
+    i = 1
+    for object in resultado:
+        print('#' + str(i) + ':')
+        pprint.pprint(object)
+        i += 1
+
+    print('Insert #1')
+
+    print('Insert #2')
+
+    print('Update #1')
+
+    print('Update #2')
+
+    print('Delete #1')
+
+    print('Delete #2')
   
     
   
