@@ -41,7 +41,7 @@ def mapper(record):
     #mr.emit_intermediate((),1)
     
     #mr.emit_intermediate((year,generation),n_suicidios)#esta si
-    mr.emit_intermediate((year,generation),n_suicidios)
+    mr.emit_intermediate(generation,n_suicidios)
     #mr.emit_intermediate(generation,1)
 
 def reducer(key, list_of_values):
@@ -52,10 +52,15 @@ def reducer(key, list_of_values):
     # usa mr.emit
     # ------------------------
     sum=0
+    
     for i in list_of_values:
+        
+        
         sum += int(i)
+    
     mr.emit((key,sum))
-
+    
+    
 # Do not modify below this line
 # =============================
 if __name__ == '__main__':
