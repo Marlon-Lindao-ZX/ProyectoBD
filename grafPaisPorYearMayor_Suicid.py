@@ -23,7 +23,7 @@ for valor_lista in l:
     if valor_lista[0][1] in diccionario.keys():
         elemento_interno = diccionario[valor_lista[0][1]]
         n_suicidio=list(elemento_interno.values())[0]
-        if int(valor_lista[1]) > int(n_suicidio):
+        if int(valor_lista[1]) >= int(n_suicidio):
             pais_anterior=list(elemento_interno.keys())[0]
             elemento_interno.pop(pais_anterior)
             pais_nuevo=valor_lista[0][0]
@@ -66,11 +66,14 @@ for x, y in zip(years, numero_suicidio):
 for i,c in zip(pais,colores):
     ax.plot(19, 30, color=c, label=i)
 
-fig.set_size_inches(300, 250)
+fig.set_size_inches(15, 5)
 ax.legend(loc="upper right", title="Paises", frameon=False)
 ax.yaxis.set_major_formatter(millions)
 ax.bar(years, numero_suicidio,color=colores,label="x")
-
-
+ax.set_title("Paises con mayor número de suicidios durante el año 2000 y 2016",color="blue")
+plt.rc('xtick', labelsize=7)    # fontsize of the tick labels
+plt.rc('ytick', labelsize=7)    # fontsize of the tick labels
+plt.xlabel('Año', fontsize=12)
+plt.ylabel('Total de suicidios', fontsize=12)
 #plt.show()
 plt.savefig("numSuicidPorPais.png")
