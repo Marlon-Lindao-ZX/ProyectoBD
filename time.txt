@@ -1,0 +1,90 @@
+[H[2J[3JHaciendo por continente
+Tiempo de la consulta es: 0.0001010894775390625 segundos
+Tiempo del Map Reduce es: 0.12289953231811523 segundos
+Generado grafica de numeros de suicidios en el europa desde el año 2000 al 2015
+Grafica guardada en europa.png
+Generado grafica de numeros de suicidios por rango de edad en el europa desde el año 2000 al 2015
+Grafica guardada en RangoEdad_europa.png
+
+Tiempo de la consulta es: 5.2928924560546875e-05 segundos
+Tiempo del Map Reduce es: 0.006789445877075195 segundos
+Generado grafica de numeros de suicidios en el sudamerica desde el año 2000 al 2015
+Grafica guardada en sudamerica.png
+Generado grafica de numeros de suicidios por rango de edad en el sudamerica desde el año 2000 al 2015
+Grafica guardada en RangoEdad_sudamerica.png
+
+Parametro enviado no es valido, utilizando valor mundo para trabajar con todos los datos
+Tiempo de la consulta es: 5.602836608886719e-05 segundos
+Tiempo del Map Reduce es: 0.08018112182617188 segundos
+Generado grafica de numeros de suicidios en el mundo desde el año 2000 al 2015
+Grafica guardada en mundo.png
+Generado grafica de numeros de suicidios por rango de edad en el mundo desde el año 2000 al 2015
+Grafica guardada en RangoEdad_mundo.png
+Haciendo con pais
+Opcion p activado, se ignorará opcion c
+Tiempo de la consulta es: 4.4345855712890625e-05 segundos
+Tiempo del Map Reduce es: 0.0008723735809326172 segundos
+Generado grafica de numeros de suicidios en el pais Ecuador desde el año 2000 al 2015
+Grafica guardada en Ecuador.png
+Generado grafica de numeros de suicidios por rango de edad en el pais Ecuador desde el año 2000 al 2015
+Grafica guardada en RangoEdad_Ecuador.png
+Haciendo por genero
+Tiempo de la consulta es: 6.198883056640625e-05 segundos
+Tiempo del Map Reduce es: 0.009367704391479492 segundos
+Generado grafica de numeros de suicidios en el sudamerica buscando por genero 'male' desde el año 2000 al 2015
+Grafica guardada en sudamerica_male.png
+Generado grafica de numeros de suicidios por rango de edad en el sudamerica buscando por genero 'male' desde el año 2000 al 2015
+Grafica guardada en RangoEdad_sudamerica_male.png
+
+Tiempo de la consulta es: 5.507469177246094e-05 segundos
+Tiempo del Map Reduce es: 0.0047054290771484375 segundos
+Generado grafica de numeros de suicidios en el sudamerica buscando por genero 'female' desde el año 2000 al 2015
+Grafica guardada en sudamerica_female.png
+Generado grafica de numeros de suicidios por rango de edad en el sudamerica buscando por genero 'female' desde el año 2000 al 2015
+Grafica guardada en RangoEdad_sudamerica_female.png
+
+Tiempo de la consulta es: 0.0001423358917236328 segundos
+Tiempo del Map Reduce es: 0.025234222412109375 segundos
+Generado grafica de numeros de suicidios en el europa buscando por genero 'male' desde el año 2000 al 2015
+Grafica guardada en europa_male.png
+Generado grafica de numeros de suicidios por rango de edad en el europa buscando por genero 'male' desde el año 2000 al 2015
+Grafica guardada en RangoEdad_europa_male.png
+
+Tiempo de la consulta es: 7.987022399902344e-05 segundos
+Tiempo del Map Reduce es: 0.019794702529907227 segundos
+Generado grafica de numeros de suicidios en el europa buscando por genero 'female' desde el año 2000 al 2015
+Grafica guardada en europa_female.png
+Generado grafica de numeros de suicidios por rango de edad en el europa buscando por genero 'female' desde el año 2000 al 2015
+Grafica guardada en RangoEdad_europa_female.png
+
+Parametro enviado no es valido, utilizando valor mundo para trabajar con todos los datos
+Tiempo de la consulta es: 5.7697296142578125e-05 segundos
+Tiempo del Map Reduce es: 0.0729680061340332 segundos
+Generado grafica de numeros de suicidios en el mundo buscando por genero 'male' desde el año 2000 al 2015
+Grafica guardada en mundo_male.png
+Generado grafica de numeros de suicidios por rango de edad en el mundo buscando por genero 'male' desde el año 2000 al 2015
+Grafica guardada en RangoEdad_mundo_male.png
+
+Parametro enviado no es valido, utilizando valor mundo para trabajar con todos los datos
+Tiempo de la consulta es: 0.00010514259338378906 segundos
+Tiempo del Map Reduce es: 0.06653451919555664 segundos
+Generado grafica de numeros de suicidios en el mundo buscando por genero 'female' desde el año 2000 al 2015
+Grafica guardada en mundo_female.png
+Generado grafica de numeros de suicidios por rango de edad en el mundo buscando por genero 'female' desde el año 2000 al 2015
+Grafica guardada en RangoEdad_mundo_female.png
+
+Opcion p activado, se ignorará opcion c
+Tiempo de la consulta es: 2.384185791015625e-05 segundos
+Tiempo del Map Reduce es: 0.0012829303741455078 segundos
+Generado grafica de numeros de suicidios en el pais Ecuador buscando por genero 'male' desde el año 2000 al 2015
+Grafica guardada en Ecuador_male.png
+Generado grafica de numeros de suicidios por rango de edad en el pais Ecuador buscando por genero 'male' desde el año 2000 al 2015
+Grafica guardada en RangoEdad_Ecuador_male.png
+
+Opcion p activado, se ignorará opcion c
+Tiempo de la consulta es: 3.647804260253906e-05 segundos
+Tiempo del Map Reduce es: 0.0008115768432617188 segundos
+Generado grafica de numeros de suicidios en el pais Ecuador buscando por genero 'female' desde el año 2000 al 2015
+Grafica guardada en Ecuador_female.png
+Generado grafica de numeros de suicidios por rango de edad en el pais Ecuador buscando por genero 'female' desde el año 2000 al 2015
+Grafica guardada en RangoEdad_Ecuador_female.png

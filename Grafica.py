@@ -6,6 +6,7 @@ from pymongo import MongoClient
 import matplotlib.pyplot as plt
 import pprint
 import numpy as np
+import time
 
 
 mr = MapReduce.MapReduce()
@@ -206,7 +207,11 @@ if __name__ == '__main__':
     elif genero == 'female':
         query['sex'] = 'female'
 
+    beginning = time.time()
     resultado = db.Suicidios.find(query)
+    end = time.time()
+
+    print('Tiempo de la consulta es: ' + str((end-beginning)) + ' segundos')
 
     if resultado is None:
         print("La consulta a la base no arrojo resultados, terminando programa")
@@ -226,7 +231,11 @@ if __name__ == '__main__':
         listaSTR += "]\n"
         lista.append(listaSTR)
 
+    beginning = time.time()
     mr.execute(lista, mapper, reducer)
+    end = time.time()
+
+    print('Tiempo del Map Reduce es: ' + str((end-beginning)) + ' segundos')
 
     title1 = 'Grafica de distribuicion de numeros de suicidios por año en '
     title2 = 'Grafica de distribucion de numeros de suicidios por año separados por rango de edad en '
