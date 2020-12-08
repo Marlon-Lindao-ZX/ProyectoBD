@@ -2,25 +2,29 @@
 
 clear
 rm *.png
-echo "\nHaciendo normal\n"
+echo "Haciendo por continente"
 python3 Grafica.py -c europa
-echo "\n"
+echo ""
 python3 Grafica.py -c sudamerica
-echo "\n"
+echo ""
 python3 Grafica.py -c mundo
 
-echo "\nHaciendo con pais\n"
-python3 Grafica.py -c europa -p Ecuador
-echo "\n"
-python3 Grafica.py -p Spain
-echo "\n"
-python3 Grafica.py -p Japan
-
-echo "\nHaciendo por genero\n"
+echo "Haciendo con pais"
+python3 Grafica.py -p Ecuador
+echo "Haciendo por genero"
 python3 Grafica.py -c sudamerica -g male
-echo "\n"
-python3 Grafica.py -p Ecuador -g female
-echo "\n"
-python3 Grafica.py -c mundo -g male
-echo "\n"
+echo ""
+python3 Grafica.py -c sudamerica -g female
+echo ""
+python3 Grafica.py -c europa -g male
+echo ""
 python3 Grafica.py -c europa -g female
+echo ""
+python3 Grafica.py -c mundo -g male
+echo ""
+python3 Grafica.py -c mundo -g female
+echo ""
+python3 Grafica.py -p Ecuador -g male
+echo ""
+python3 Grafica.py -p Ecuador -g female
+
