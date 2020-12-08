@@ -1,4 +1,4 @@
-import MapReduce
+import MapReduce2
 import sys
 import getopt
 import re
@@ -9,7 +9,7 @@ import numpy as np
 import time
 
 
-mr = MapReduce.MapReduce()
+mr = MapReduce2.MapReduce2()
 
 continentes = ['europa', 'sudamerica']
 
